@@ -308,6 +308,16 @@ li a {
     padding-top: 10%;
     padding-bottom: 10%;
   }
+  
+  /*  */
+
+  .ventures-section > .grid-layer {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
+  .ventures-section > .grid-layer > a .images-bg-box {
+    height: 300px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -372,5 +382,15 @@ li a {
   .founder-text span {
     margin: 0px;
     font-size: 52px;
+  }
+
+  /*  */
+
+  .ventures-section > .grid-layer {
+    grid-template-columns: 1fr;
+  }
+  
+  .ventures-section > .grid-layer > a .images-bg-box {
+    height: 250px;
   }
 }
