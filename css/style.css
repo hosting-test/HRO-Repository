@@ -27,7 +27,7 @@ body {
 
 .header-container {
   width: 100%;
-  margin: opx auto;
+  margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -38,6 +38,7 @@ body {
 }
 
 .header {
+  /* display: none !important; */
   width: 100%;
   max-width: 1440px;
   display: flex;
@@ -251,6 +252,10 @@ li a {
 
 /* Founder Section End */
 
+.ventures-section{
+  display: none;
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
   /* Header Section */
   .header {
@@ -275,7 +280,7 @@ li a {
 @media (max-width: 768px) {
   /* Header Section */
   .header .logo > svg {
-    width: 500px;
+    width: 300px;
   }
   .header {
     padding-top: 5%;
