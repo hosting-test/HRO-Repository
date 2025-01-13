@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    /* Desktop Navigation */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    .nav-links li {
+      margin: 0 15px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    /* Mobile Navigation */
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px;
+    }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -80%;
+      width: 80%;
+      height: 100%;
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+      transition: right 0.3s ease;
+    }
+    .side-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    .side-menu .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+    .side-menu.active {
+      right: 0;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .burger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="logo"><a href="#" style="color:white; text-decoration:none;">Logo</a></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <div class="side-menu" id="sideMenu">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const sideMenu = document.getElementById('sideMenu');
+    const sideMenuLinks = sideMenu.querySelectorAll('a');
+    const closeBtn = document.getElementById('closeBtn');
+
+    burger.addEventListener('click', () => {
+      sideMenu.classList.toggle('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+    });
+
+    sideMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        sideMenu.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
