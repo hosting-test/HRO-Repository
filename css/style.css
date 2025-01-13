@@ -38,7 +38,6 @@ body {
 }
 
 .header {
-  /* display: none !important; */
   width: 100%;
   max-width: 1440px;
   display: flex;
@@ -129,9 +128,7 @@ li a {
   right: 0;
 }
 
-/* Header Section End */
-
-/* hero section Start */
+/* hero section */
 
 .hero-section {
   width: var(--full-width);
@@ -180,9 +177,7 @@ li a {
   padding-right: var(--side-padding);
 }
 
-/* hero section End */
-
-/* Founder Section Start */
+/* Founder Section */
 
 .founder-section {
   width: var(--full-width);
@@ -250,23 +245,53 @@ li a {
   margin-bottom: -10%;
 }
 
-/* Founder Section End */
+/* Ventures Section */
 
-.ventures-section{
-  display: none;
+.ventures-section {
+  width: var(--full-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
+.ventures-section > .grid-layer {
+  width: 100%;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.ventures-section > .grid-layer > a .images-bg-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  padding: 5%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.ventures-section > .grid-layer > a .images-bg-box img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
   /* Header Section */
   .header {
     padding-top: 1%;
     padding-bottom: 1%;
   }
-  /* Header Section */
 
   /* hero Section */
   .hero-section {
-    width: 100%;
     height: 50vh;
     background-image: url("/assets/images/HRO-hero_section-BG-large.jpg");
   }
@@ -274,13 +299,21 @@ li a {
     padding-top: 20px;
     font-size: 52px;
   }
-  /* hero Section */
+
+  /* Founder Section */
+
+  .founder-box {
+    flex-direction: row;
+    gap: 2vh;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Header Section */
   .header .logo > svg {
-    width: 300px;
+    width: 275px;
   }
   .header {
     padding-top: 5%;
@@ -292,11 +325,9 @@ li a {
   .burger {
     display: flex;
   }
-  /* Header Section */
 
   /* hero Section */
   .hero-section {
-    width: 100%;
     height: 60vh;
     background-image: url("/assets/images/HRO-hero_section-BG-large.jpg");
   }
@@ -304,5 +335,42 @@ li a {
     padding-top: 20px;
     font-size: 32px;
   }
-  /* hero Section */
+
+  /* Founder Section */
+
+  .founder-box {
+    flex-direction: column;
+    gap: 2vh;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .founder-image,
+  .founder-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .founder-text {
+    gap: 2vh;
+  }
+
+  .founder-text > h2 {
+    font-size: 28px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .founder-text > p {
+    font-size: 16px;
+    text-align: justify;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .founder-text span {
+    margin: 0px;
+    font-size: 52px;
+  }
 }
