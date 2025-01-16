@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js"></script>
     <title>Hanu Reddy Odyssey</title>
   </head>
 
@@ -77,11 +76,11 @@
         </div>
         <div class="menu nav-links">
           <ul>
-            <li><a href="/Index.html">Home</a></li>
-            <li><a href="/Index.html#about-us">About US</a></li>
-            <li><a href="/Index.html#our-ventures">Our Ventures</a></li>
-            <li><a href="/Index.html#testimonials">Testimonials</a></li>
-            <li><a href="/Index.html#contact">Contact Us</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#about-us">About US</a></li>
+            <li><a href="/#our-ventures">Our Ventures</a></li>
+            <li><a href="/#testimonials">Testimonials</a></li>
+            <li><a href="/#contact">Contact Us</a></li>
           </ul>
         </div>
         <div class="burger">
@@ -93,33 +92,12 @@
     </div>
     <div class="side-menu" id="sideMenu">
       <span class="close-btn" id="closeBtn">&times;</span>
-      <a href="/Index.html">Home</a>
-      <a href="/Index.html#about-us">About US</a>
-      <a href="/Index.html#our-ventures">Our Ventures</a>
-      <a href="/Index.html#testimonials">Testimonials</a>
-      <a href="/Index.html#contact">Contact Us</a>
+      <a href="/">Home</a>
+      <a href="/#about-us">About US</a>
+      <a href="/#our-ventures">Our Ventures</a>
+      <a href="/#testimonials">Testimonials</a>
+      <a href="/#contact">Contact Us</a>
     </div>
-    <script>
-      const burger = document.querySelector(".burger");
-      const sideMenu = document.getElementById("sideMenu");
-      const closeBtn = document.getElementById("closeBtn");
-      const sideMenuLinks = sideMenu.querySelectorAll("a");
-
-      burger.addEventListener("click", () => {
-        sideMenu.classList.toggle("active");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        sideMenu.classList.remove("active");
-      });
-
-      sideMenuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          sideMenu.classList.remove("active");
-        });
-      });
-    </script>
-    <!-- Header End -->
     <!-- Hero Section -->
     <div class="hero-section">
       <div class="hero-box">
@@ -129,7 +107,7 @@
         </h1>
       </div>
     </div>
-    <div class="founder-section">
+    <div class="founder-section" id="about-us">
       <div class="founder-box">
         <div class="founder-image">
           <img src="assets/images/Hanu_Reddy.jpg" alt="Hanu Reddy" />
@@ -146,79 +124,114 @@
         </div>
       </div>
     </div>
-    <div class="ventures-section">
+    <div class="ventures-section" id="our-ventures">
+      <h2>Our Ventures</h2>
       <div class="grid-layer">
         <a href="">
           <div class="images-bg-box ventures-box-1">
-            <img src="assets/logo/Hanu_reddy_realty-logo.svg" alt="Hanu_reddy_realty-logo" />
-            <span>International Real Estate Brokers</span>
+            <img
+              src="assets/logo/Hanu_reddy_realty-logo.svg"
+              alt="Hanu_reddy_realty-logo"
+            />
+            <p>International Real Estate Brokers</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-2">
-            <img src="assets/logo/Hanu_Reddy_Residences-Logo.svg" alt="Hanu_Reddy_Residences-Logo" />
-            <span>Your Home Away From Home</span>
+            <img
+              src="assets/logo/Hanu_Reddy_Residences-Logo.svg"
+              alt="Hanu_Reddy_Residences-Logo"
+            />
+            <p>Your Home Away From Home</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-3">
             <img src="assets/logo/SPPGardens-logo.svg" alt="SPPGardens-logo" />
-            <span>Chennai’s Finest Event Venue</span>
+            <p>Chennai’s Finest Event Venue</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-4">
-            <img src="assets/logo/Pushpas_Kitchen-logo.svg" alt="Pushpas_Kitchen-logo" />
-            <span>Made For You With Love</span>
+            <img
+              src="assets/logo/Pushpas_Kitchen-logo.svg"
+              alt="Pushpas_Kitchen-logo"
+            />
+            <p>Made For You With Love</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-5">
-            <img src="assets/logo/Hanu_Reddy_mangoes-logo.svg" alt="Hanu_Reddy_mangoes-logo" />
-            <span>Organic, Tree Ripened, Banganapalli Mangoes</span>
+            <img
+              src="assets/logo/Hanu_Reddy_mangoes-logo.svg"
+              alt="Hanu_Reddy_mangoes-logo"
+            />
+            <p>Organic, Tree Ripened, Banganapalli Mangoes</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-6">
-            <img src="assets/logo/Hanu_Reddy_Raghava_farms-logo.svg" alt="Hanu_Reddy_Raghava_farms-logo" />
-            <span>Chennai’s Finest Event Venue</span>
+            <img
+              src="assets/logo/Hanu_Reddy_Raghava_farms-logo.svg"
+              alt="Hanu_Reddy_Raghava_farms-logo"
+            />
+            <p>Chennai’s Finest Event Venue</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-7">
-            <img src="assets/logo/Hanu_reddy_Mango_Tourism-logo.svg" alt="Hanu_reddy_Mango_Tourism-logo" />
-            <span>The Country’s Sweetest Celebration</span>
+            <img
+              src="assets/logo/Hanu_reddy_Mango_Tourism-logo.svg"
+              alt="Hanu_reddy_Mango_Tourism-logo"
+            />
+            <p>The Country’s Sweetest Celebration</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-8">
-            <img src="assets/logo/Hanu_Reddy_Kennels-logo.svg" alt="Hanu_Reddy_Kennels-logo" />
-            <span>Bringing The Joy of K9 Companionship</span>
+            <img
+              src="assets/logo/Hanu_Reddy_Kennels-logo.svg"
+              alt="Hanu_Reddy_Kennels-logo"
+            />
+            <p>Bringing The Joy of K9 Companionship</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-9">
-            <img src="assets/logo/Hanu_Reddy_Ongoles-logo.svg" alt="Hanu_Reddy_Ongoles-logo" />
-            <span>Ongole Cattle: Our Heritage</span>
+            <img
+              src="assets/logo/Hanu_Reddy_Ongoles-logo.svg"
+              alt="Hanu_Reddy_Ongoles-logo"
+            />
+            <p>Ongole Cattle: Our Heritage</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-10">
-            <img src="assets/logo/Hanu_Reddy_Business_centre-logo.svg" alt="Hanu_Reddy_Business_centre-logo" />
-            <span>Your Business, Our Address.</span>
+            <img
+              src="assets/logo/Hanu_Reddy_Business_centre-logo.svg"
+              alt="Hanu_Reddy_Business_centre-logo"
+            />
+            <p>Your Business, Our Address.</p>
           </div>
         </a>
         <a href="">
           <div class="images-bg-box ventures-box-11">
-            <img src="assets/logo/Hanu_Reddy_Studios-logo.svg" alt="Hanu_Reddy_Studios-logo" />
-            <span>From Waste to Worship</span>
+            <img
+              src="assets/logo/Hanu_Reddy_Studios-logo.svg"
+              alt="Hanu_Reddy_Studios-logo"
+            />
+            <p>From Waste to Worship</p>
           </div>
         </a>
       </div>
     </div>
-    <div class="testimonials-section">
+    <div class="testimonials-section" id="testimonials">
       <div class="testimonials-content">
         <h2>TESTIMONIALS</h2>
+
+        <!-- Left Arrow -->
+        <button class="slider-arrow left">&#10094;</button>
+
         <div class="testimonials-slider">
           <div class="testimonial-slide">
             <div class="testimonial-box">
@@ -231,54 +244,43 @@
               </p>
               <span class="text-style">S. Raman</span>
             </div>
-            <img src="" alt="" />
+            <img
+              src="assets/logo/Pushpas_Kitchen-logo.svg"
+              alt="Pushpa's Kitchen Logo"
+            />
           </div>
-          <!-- END -->
+
           <div class="testimonial-slide">
             <div class="testimonial-box">
               <p>
-                "I have been a customer of Hanu Reddy Realty for over 10 years.
-                They have been managing my property in Chennai and I have been
-                very happy with their service. They are very professional and
-                responsive. I would highly recommend them to anyone looking for
-                property management services in Chennai."
+                "Their team was amazing from start to finish. I couldn't have
+                asked for a better experience managing my real estate needs."
               </p>
-              <span class="text-style">S. Raman</span>
+              <span class="text-style">A. Kumar</span>
             </div>
-            <img src="" alt="" />
+            <img
+              src="assets/logo/Hanu_Reddy_Residences-Logo.svg"
+              alt="Hanu Reddy Residences Logo"
+            />
           </div>
-          <!-- END -->
+
           <div class="testimonial-slide">
             <div class="testimonial-box">
               <p>
-                "I have been a customer of Hanu Reddy Realty for over 10 years.
-                They have been managing my property in Chennai and I have been
-                very happy with their service. They are very professional and
-                responsive. I would highly recommend them to anyone looking for
-                property management services in Chennai."
+                "Professional, responsive, and extremely helpful. I highly
+                recommend Hanu Reddy Realty for any property services."
               </p>
-              <span class="text-style">S. Raman</span>
+              <span class="text-style">Priya S.</span>
             </div>
-            <img src="" alt="" />
+            <img src="assets/logo/SPPGardens-logo.svg" alt="SPP Gardens Logo" />
           </div>
-          <div class="testimonial-slide">
-            <div class="testimonial-box">
-              <p>
-                "I have been a customer of Hanu Reddy Realty for over 10 years.
-                They have been managing my property in Chennai and I have been
-                very happy with their service. They are very professional and
-                responsive. I would highly recommend them to anyone looking for
-                property management services in Chennai."
-              </p>
-              <span class="text-style">S. Raman</span>
-            </div>
-            <img src="" alt="" />
-          </div>
-          <!-- END -->
         </div>
+
+        <!-- Right Arrow -->
+        <button class="slider-arrow right">&#10095;</button>
       </div>
     </div>
-    <div class="footer">
+    <div class="footer" id="contact">
       <a href="tel:+914443999000">
         <div class="align-box">
           <img src="" alt="" />
@@ -301,5 +303,6 @@
         </div>
       </a>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
